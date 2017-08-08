@@ -11773,6 +11773,25 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>一些小建议：</p>
+<ol>
+<li>Python的某些包在Windows系统下的兼容性不佳，建议安装Python2下的Anaconda</li>
+<li>对于实验而言，运行的交互性至关重要，建议使用Jupyter notebook编程（Anaconda自带），这个小示例就是一个Jupyter notebook。使用简单，一些常见的操作可参考：<a href="https://www.zybuluo.com/hanxiaoyang/note/534296">Jupyter Notebook的27个秘诀</a></li>
+<li>常用包：<ul>
+<li>必会：numpy, pandas, scikit-learn</li>
+<li>推荐：matplotlib, seaborn, hmmlearn(马尔科夫链相关), gplearn(进化算法相关), imbalanced-learn(不平衡数据处理)</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
@@ -11806,8 +11825,8 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 随机生成10000个100维特征的二分类数据集</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">)])</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">)])</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
 <span class="k">print</span> <span class="s2">&quot;特征集大小：&quot;</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span>
 <span class="k">print</span> <span class="s2">&quot;标签集大小：&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span>
 
@@ -11904,9 +11923,9 @@ div#notebook {
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Accuracy: 0.509
-F1: 0.444570135747
-MCC: 0.0187490440248
+<pre>Accuracy: 0.486
+F1: 0.419864559819
+MCC: -0.0221289724657
 </pre>
 </div>
 </div>
@@ -11950,9 +11969,9 @@ MCC: 0.0187490440248
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Accuracy: 0.4932
-F1: 0.423304506145
-MCC: -0.0138203852612
+<pre>Accuracy: 0.5037
+F1: 0.427764326069
+MCC: 0.0070158050651
 </pre>
 </div>
 </div>
